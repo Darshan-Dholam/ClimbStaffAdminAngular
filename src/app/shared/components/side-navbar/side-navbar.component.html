@@ -1,0 +1,56 @@
+<div class="snap-drawers">
+  <div class="snap-drawer snap-drawer-left" >
+    <div class="container pl-2 pr-3">
+      <div class="d-flex align-items-center mt-3">
+        <img class="rounded-circle" src="https://dummyimage.com/50x50/000/fff.jpg&text=logo" />
+        <div class="ml-2">
+          <div class="font-weight-bold">{{user.name}}</div>
+          <div class="small">{{user.cname}}</div>
+        </div>
+      </div>
+      <hr>
+      <ul class="nav text-center flex-column">
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['/account']" routerLinkActive="active">Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['/meeting']" routerLinkActive="active">Meetings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['/mapview']" routerLinkActive="active">Map View</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['/reports']" routerLinkActive="active">Reports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['/settings']" routerLinkActive="active">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+
+      <br>
+      <div class="snap-footer">
+        <div class="d-flex justify-content-center flex-column">
+          <div class="logo-centered">
+            <svg-icon src="/assets/images/climbstaff.svg"></svg-icon>
+          </div>
+          <div class="logo-centered">
+            <svg-icon src="/assets/images/climbstaff-text.svg"></svg-icon>
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-around">
+          <div><a class="text-secondary small font-weight-bold" href="https://climbstaff.com/terms">Terms &
+              Conditions</a></div>
+          <div><a class="text-secondary small font-weight-bold" href="https://climbstaff.com/privacy">Privacy
+              Policy</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

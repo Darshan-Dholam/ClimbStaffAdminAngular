@@ -1,0 +1,42 @@
+
+
+.drawer-inner {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.snapjs-expand-left .drawer-inner,
+.snapjs-expand-right .drawer-inner {
+  opacity: 0;
+}
+
+/* Default demo styles */
+.snap-drawer {
+  background: #fafafa;
+  color: #222;
+  width: 80%;
+}
+
+.snap-drawer hr {
+  border-color: #9b71bd;
+}
+
+.logo-centered {
+  svg {
+    max-width: 72px;
+    width: 20vw;
+  }
+
+  text-align:center;
+}
+
+
+.snap-footer {
+  position: absolute;
+  width: 95%;
+  z-index: -9;
+  bottom: 20px;
+}

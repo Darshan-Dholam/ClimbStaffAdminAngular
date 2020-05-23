@@ -1,0 +1,15 @@
+@import '../../../assets/components/colors.scss';
+
+.climbstaff-banner {
+  padding: 1rem;
+  background: $brand;
+}
+
+.logo-centered{
+	svg{
+		max-width:72px;
+		width:20vw;
+
+	}
+	text-align:center;
+}

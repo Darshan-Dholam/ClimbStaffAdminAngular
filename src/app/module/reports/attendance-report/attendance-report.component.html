@@ -1,0 +1,16 @@
+<div>Date: {{ date }} </div>
+
+<div class="row">
+  <div class="col-12 pt-5 pb-4">
+    <input type="text"  class="form-control" [(ngModel)]="employeeSearch"
+      placeholder="Search Employees">
+  </div>
+</div>
+
+<div *ngFor="let report of reports | attendanceReportFilter: employeeSearch " class="d-flex mt-4 mb-4 flex-column">
+  <div class="text-primary font-weight-bold">{{report[0]}} </div>
+  <div class="text-primary font-weight-bold">{{report[2]}} </div>
+  <div class="text-primary font-weight-bold">{{report[3]}} </div>
+  <div class="text-primary font-weight-bold">{{report[4]}} </div>
+  <div class="text-primary font-weight-bold">{{report[5]}} </div>
+</div>

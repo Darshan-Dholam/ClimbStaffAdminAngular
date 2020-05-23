@@ -1,0 +1,35 @@
+<agm-map data-snap-ignore="true" class="map" [fitBounds]="true" [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+  <agm-marker *ngFor="let employee of employees;" [latitude]="employee.position.lat" [longitude]="employee.position.lng"
+    [agmFitBounds]="true" (markerClick)="bindEmployeeInfo({id:employee.mu_id})" [iconUrl]="
+    {
+      url: './assets/images/businessman.png'
+      }">
+    <!-- <agm-info-window>
+      <strong>{{ employee.name }}</strong>
+    </agm-info-window> -->
+  </agm-marker>
+</agm-map>
+
+<div *ngIf="div_employeeinfo" class="card map-card">
+  <div class="card-title bg-light font-size-lg p-3 text-dark d-flex m-0">
+    <h5 class="p-0 m-0 flex-grow-1"><i class="align-bottom material-icons">person_pin</i> {{name}}</h5>
+    <a href="tel:{{mobile}}"><i class="align-bottom material-icons">call</i></a>
+  </div>
+  <div class="card-body m-0">
+    <div class="row p-0 mb-2">
+      <div class="col font-italic"><i class="align-bottom material-icons">assignment_ind</i> {{designation}}</div>
+      <div class="col text-right font-italic"><i class="align-bottom font-style-italic material-icons">offline_bolt</i>
+        {{lastActive}}</div>
+    </div>
+    <div class="d-flex p-0 mb-2">
+      <i class="align-bottom material-icons">near_me</i>
+      <div class="flex-grow-1 font-italic">{{ address }}</div>
+    </div>
+    <div>
+      <i class="align-bottom material-icons font-italic">battery_full</i>{{battery}}%
+    </div>
+  </div>
+</div>
+<div *ngIf="div_default">
+  Please click on Employee to get details..
+</div>

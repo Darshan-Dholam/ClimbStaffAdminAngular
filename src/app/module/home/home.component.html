@@ -1,0 +1,81 @@
+<div class="card my-3 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Staff - Attendance Overview</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="card-body">
+      <div class="row">
+        
+        <div class="col">
+          
+          <div class="chart-wrapper">
+            <canvas baseChart [data]="attendancePieChartData"
+              [labels]="attendancePieChartLabels"
+              [chartType]="attendancePieChartType"
+              [options]="attendancePieChartOptions"
+              [colors]="attendancePieChartColors"
+              [legend]="attendancePieChartLegend">
+              >
+            </canvas>
+          </div>
+
+        </div>
+        
+      </div>
+    
+
+    </div>
+  </div>
+
+<div class="card my-3 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Staff - Meetings Overview</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="card-body">
+      <div class="row">
+        
+        <div class="col">
+          
+          <div class="chart-wrapper">
+            <canvas baseChart [data]="meetingPieChartData"
+              [labels]="meetingPieChartLabels"
+              [chartType]="meetingPieChartType"
+              [options]="meetingPieChartOptions"
+              [colors]="meetingPieChartColors"
+              [legend]="meetingPieChartLegend">
+              >
+            </canvas>
+          </div>
+
+        </div>
+        
+      </div>
+    
+
+    </div>
+  </div>
+
+<div class="card my-3 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Staff - Maximum Duty served</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="card-body">
+      <div class="d-flex" *ngFor="let dd of dutyDuration" >
+        <div class="flex-grow-1">{{ dd.name }}</div>
+        <div>{{ dd.max }}</div>
+      </div>
+      <div *ngIf='dutyDuration.length === 0'>No Movements Today</div>
+    </div>
+  </div>
+
+<div class="card my-3 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Staff - Maximum Distance Covered</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="card-body">
+    <div class="d-flex" *ngFor="let dist of distance" >
+      <div class="flex-grow-1">{{ dist.name }}</div>
+      <div>{{ dist.max }}</div>
+    </div>
+    <div *ngIf='distance.length === 0'>No Results</div>
+    </div>
+  </div>

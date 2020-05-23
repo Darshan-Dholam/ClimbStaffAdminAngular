@@ -1,0 +1,49 @@
+<div class="font-weight-bold m-2 text-center">Account Section</div>
+<hr>
+
+<div class="card my-3 mx-1">
+  <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Income Entries</div>
+    <i class="align-bottom material-icons">money</i>
+  </div>
+  <div class="card-body">
+    <div *ngFor="let income of incomes" class="d-flex align-items-center">
+      <div class="flex-grow-1">
+        <span class="d-block font-weight-bold">{{ income.name }}</span>
+        <span class="small text-secondary font-italic">{{ income.info }}</span>
+      </div>
+      <div class="text-right"> {{ income.amount }} Rs.</div>
+      <div class="text-right">
+        <div class="material-icons text-secondary align-middle" (click)="onSelect(income.account_id,income.name)">
+          keyboard_arrow_right</div>
+      </div>
+      <hr>
+    </div>
+    <div *ngIf='incomes.length === 0'>No Results</div>
+
+  </div>
+</div>
+
+
+<div class="card my-3 mx-1">
+  <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Expense Entries</div>
+    <i class="align-bottom material-icons">money</i>
+  </div>
+  <div class="card-body">
+    <div *ngFor="let expense of expenses" class="d-flex align-items-center">
+      <div class="flex-grow-1">
+        <span class="d-block font-weight-bold">{{ expense.name }}</span>
+        <span class="small text-secondary font-italic">{{ expense.info }}</span>
+      </div>
+      <div class="text-right"> {{ expense.amount }} Rs.</div>
+      <div class="text-right">
+        <div class="material-icons align-middle text-secondary" (click)="onSelect(expense.account_id, expense.name)">
+          keyboard_arrow_right</div>
+      </div>
+      <hr>
+    </div>
+    <div *ngIf='expenses.length === 0'>No Results</div>
+
+  </div>
+</div>

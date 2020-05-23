@@ -1,0 +1,47 @@
+<div class="font-weight-bold m-2 text-center">Meeting Section</div>
+<hr>
+
+  <div class="card my-3 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Recent Meetings</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="card-body">
+      <div *ngFor="let recent of recents" class="d-flex align-items-center">
+      <div class="flex-grow-1">
+        <span class="d-block font-weight-bold">{{ recent.employee }}</span>
+        <span class="small text-secondary font-italic">with - </span><span
+          class="font-weight-bold text-info small">{{ recent.client }}</span>
+      </div>
+      <div class="text-right">{{ recent.status }}</div>
+      <div class="text-right">
+        <div class="material-icons align-middle text-secondary" (click)="onSelect(recent.meeting_id)">keyboard_arrow_right</div>
+      </div>
+      <hr>
+    </div>
+    <div *ngIf='recents.length === 0'>User don't have any recent Meetings</div>
+
+    </div>
+  </div>
+
+
+  <div class="card my-3 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Upcoming Meetings</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="card-body">
+      <div *ngFor="let upcoming of upcomings" class="d-flex align-items-center">
+      <div class="flex-grow-1">
+        <span class="d-block font-weight-bold">{{ upcoming.employee }}</span>
+        <span class="small text-secondary font-italic">with - </span><span
+          class="font-weight-bold text-info small">{{ upcoming.client }}</span>
+      </div>
+      <div class="text-right">{{ upcoming.status }}</div>
+      <div class="text-right">
+        <div class="material-icons align-middle text-secondary" (click)="onSelect(upcoming.meeting_id)">keyboard_arrow_right</div>
+      </div>
+      <hr>
+    </div>
+    <div *ngIf='upcomings.length === 0'>User don't have any recent Meetings</div>
+
+    </div>
+  </div>

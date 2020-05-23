@@ -1,0 +1,35 @@
+<div class="pt-2" (click)="goBack()">
+    <i class="material-icons text-secondary align-bottom">keyboard_arrow_left</i><span
+      class="font-weight-bold">Back</span></div>
+<div class="card my-1 mx-1">
+    <div class="card-title bg-dark p-3 mb-2 text-light d-flex">
+    <div class="m-0 flex-grow-1">Meeting Details</div>
+    <i class="align-bottom material-icons">money</i></div>
+    <div class="row card-body">
+      <div class="col">
+        <span class="pr-1">Employee: </span>
+        <div class="d-inline font-weight-bold">{{ empName }}</div><br>
+        <span class="pr-1">Meeting With: </span>
+        <div class="d-inline font-weight-bold">{{ meetingWith }}</div><br>
+        <span class="pr-1">Status: </span>
+        <div class="d-inline font-weight-bold text-success">{{ status }}</div><br>
+        <span class="pr-1">Meeting Time: </span>
+        <div class="d-inline font-weight-bold">{{ meetingTime }}</div><br>
+        <span class="pr-1">Location: </span>
+        <div class="d-inline font-weight-bold">{{ locationAddress }}</div>
+        <hr>
+        <div class="note">
+          <p class="font-weight-bold">Notes on this meeting note</p>
+          <hr>
+          <div *ngFor="let note of notes">
+            <p class="font-italic font-weight-light">{{ note.note }}<span class="text-secondary small"> -
+                {{ note.note }}</span></p>
+      </div>
+      <div *ngIf='notes.length === 0'>No Results</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+

@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+$absent: linear-gradient(to right, #ff8aa5 0%, #d93b5f 73%, #6d0019 100%);
+$present: linear-gradient(to right, #9dd53a 0%, #a1d54f 77%, #7cbc0a 100%);
+$holiday:linear-gradient(to right, #87e0fd 0%, #53cbf1 70%, #05abe0 100%);
+$leave:linear-gradient(to right, #f6e6b4 0%, #ed9017 73%);
+
+.status-box {
+	height: 5px;
+	width: 100%;
+}
+
+.absent-border {
+	background: $absent;
+}
+
+.available-border {
+	background: $present;
+}
+
+.holiday-border {
+	background: $holiday;
+}
+
+.off-border {
+	background: $leave;
+}
+
+.snap-content,
+.container {
+	user-select: none;
+}
+
+.sm-circle {
+	width: 10px;
+	height: 10px;
+	border-radius:50%;
+	display: inline-block;
+}
+
+.circle-red {
+	background: $absent;
+}
+
+.circle-success {
+	background: $present;
+}
+
+.circle-default {
+	background: $holiday;
+}
